@@ -7,13 +7,8 @@
     <title>Tela inicial</title>
 </head>
 <body>
-    <form method="POST" action="{{ route ('login') }}">
-        @csrf
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-        <label for="senha">Senha</label>
-        <input type="password" name="senha" id="senha">
-        <button type="submit">Entrar</button>
-    </form>
+    <a href="{{ route('register-index') }}">Registrar</a>
+    <br>
+    <a href="{{ route('login-index') }}">Login</a>
 </body>
 </html>

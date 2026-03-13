@@ -10,14 +10,14 @@ class AvatarController extends Controller
 {
     public function edit(){
         $avatar = Avatar::firstOrCreate(
-            ['user_id' => Auth::id()],
+            ['user_id' => 1],
             ['features' => [
                 'skin_color' => '#fcd5ce',
                 'hair_style' => 'curly',
                 'shirt_color' => '#000000'
             ]]
         );
-        return view('avatars.edit', compact('avatar'));
+        return view('avatar.edit', compact('avatar'));
     }
 
     public function update(Request $request){
