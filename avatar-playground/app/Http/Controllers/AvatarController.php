@@ -21,7 +21,7 @@ class AvatarController extends Controller
     }
 
     public function update(Request $request){
-        $avatar = Avatar::where('user_id', Auth::id());
+        $avatar = Avatar::where('user_id', 1);
         $avatar->features = $request->input('features');
         $avatar->save();
 
